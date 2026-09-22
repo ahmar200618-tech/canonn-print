@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Up Your Canon Printer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="setupView" class="setup-view">
+      <header class="site-header">
+        <div class="header-inner">
+          <a href="#" class="brand" aria-label="Canon PRINT support home">
+            <span class="canon-print-logo">
+              <span class="canon-wordmark">Canon</span>
+              <span class="print-wordmark">PRINT</span>
+            </span>
+          </a>
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services <span class="chevron">⌄</span></a>
+            <a href="#drivers">Download Driver</a>
+            <a href="#contact">Contact</a>
+            <a class="live-chat-pill" href="#chat"><span>◉</span> Live Chat Now</a>
+          </nav>
+        </div>
+      </header>
+
+      <section class="hero" id="home">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <div class="canon-badge">Canon</div>
+            <h1>Set Up Your Canon<br />Printer</h1>
+            <p>
+              Enter your Canon product name/model number, customer name<br class="desktop-break" />
+              and phone number to get the right software and drivers for you
+            </p>
+            <form id="setupForm" class="setup-form">
+              <label class="sr-only" for="product">Product name or model number</label>
+              <input id="product" name="product" type="text" placeholder="Enter your product name here" autocomplete="off" />
+              <label class="sr-only" for="customer">Customer name</label>
+              <input id="customer" name="customer" type="text" placeholder="Customer name" autocomplete="name" />
+              <label class="sr-only" for="phone">Customer phone number</label>
+              <input id="phone" name="phone" type="tel" placeholder="Customer Phone Number" autocomplete="tel" />
+              <button type="submit">Next</button>
+            </form>
+            <p id="formHint" class="form-hint">Please fill in all fields to continue.</p>
+          </div>
+          <div class="printer-panel">
+            <img src="canon-printer.jpg" alt="Canon inkjet printer" />
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <span class="canon-print-logo footer-logo">
+              <span class="canon-wordmark">Canon</span>
+              <span class="print-wordmark">PRINT</span>
+            </span>
+            <p>Your trusted partner for all printer<br />solutions in Texas. From installation to<br />repairs, we ensure your printing<br />operations never stop.</p>
+          </div>
+          <div class="footer-column">
+            <h2>Quick Links</h2>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-column">
+            <h2>Policies</h2>
+            <a href="#principles">Software Principles</a>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#refund">Refund Policy</a>
+            <a href="#terms">Terms of Use</a>
+            <a href="#cookies">Cookies Policy</a>
+            <a href="#accessibility">Accessibility</a>
+          </div>
+          <div class="footer-column">
+            <h2>Our Services</h2>
+            <a href="#installation">Printer Installation</a>
+            <a href="#repair">Repair &amp; Maintenance</a>
+            <a href="#drivers">Driver Updates</a>
+            <a href="#sales">Buy &amp; Sell</a>
+            <a href="#support">Technical Support</a>
+          </div>
+          <div class="footer-column contact-column">
+            <h2>Contact Us</h2>
+            <p><span class="pin">⌾</span> Texas, United States<br />Serving customers all over the<br />US</p>
+          </div>
+        </div>
+      </footer>
+
+      <div class="side-badge" aria-hidden="true">◈ SCANNERS</div>
+
+      <aside id="openChat" class="chat-panel is-hidden" aria-label="Chat support">
+        <div class="chat-greeting">👋 Hi! How can we help?</div>
+        <button type="button">I have a question</button>
+        <button type="button">Tell me more</button>
+        <div class="chat-fab"><span>◌</span><i>1</i></div>
+      </aside>
+      <button id="collapsedChat" class="collapsed-chat" type="button" aria-label="Open chat">
+        <span class="help-label">Need a little help?</span>
+        <span class="chat-fab"><span>◌</span><i>1</i></span>
+      </button>
+    </main>
+
+    <main id="downloadView" class="download-view is-hidden" aria-live="polite">
+      <section id="progressCard" class="progress-card">
+        <h1>Downloading Printer Drivers Please wait...</h1>
+        <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+        <div class="progress-meta"><span id="progressPercent">13%</span><span>Downloading...</span></div>
+      </section>
+
+      <section id="errorCard" class="error-card is-hidden">
+        <h1>Downloading Printer Drivers Please wait...</h1>
+        <div class="progress-track error-track">
+          <div class="progress-fill error-fill"><span>80%</span></div>
+        </div>
+        <p class="failure-note">Driver installation has failed due to fatal error C0000022</p>
+        <h2>Contact our printer technical team to resolve this problem.</h2>
+        <div class="error-divider"></div>
+        <div class="error-content">
+          <div class="error-image-wrap">
+            <img src="error-printer.jpg" alt="Printer showing an error" />
+            <span class="error-mark">×</span>
+          </div>
+          <div class="error-copy">
+            <h3>2 Issues Found.</h3>
+            <p class="issues">Printer Spooler Service Not Running<br />Network Port Not Set Correctly</p>
+            <h3 class="error-code">Error X0007E4</h3>
+            <p class="error-description">Kindly contact support and ask the technician to send you the new version of driver files via email.</p>
+            <p class="agent-prompt">Talk to our printer expert to fix error</p>
+            <button id="agentButton" class="agent-button" type="button"><span>●●</span> Chat with Live Agent Right Now</button>
+          </div>
+        </div>
+      </section>
+
+      <button id="loadingChat" class="collapsed-chat" type="button" aria-label="Open chat">
+        <span class="help-label">Need a little help?</span>
+        <span class="chat-fab"><span>◌</span><i>1</i></span>
+      </button>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
